@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let employeeRouter = EmployeeRouter().setUp()
-        let initialVC = employeeRouter.entry
+        let initialVC = employeeRouter.entryPoint
         
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = initialVC

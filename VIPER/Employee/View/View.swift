@@ -51,13 +51,14 @@ class EmployeeViewController: UIViewController,EmployeeViewProtocol {
     }
     private func configureTableView(){
         guard let tableView = self.tableView else {return}
-        tableView.dataSource = self
-       // tableView.delegate = self
+         tableView.configure(dataSource: self,delegate: nil)
+         tableView.separatorStyle = .singleLine
+         tableView.registerCell(identifiers: [ListTableCell.identifier])
     }
     func displayEmployee(employee: Employee) {
         DispatchQueue.main.async {
             self.employee = employee
-            
+            self.tableView?.restore()
             self.tableView?.reloadData()
         }
     }
@@ -65,7 +66,7 @@ class EmployeeViewController: UIViewController,EmployeeViewProtocol {
     func showError(errorMessage: String) {
         self.showAlert(title: "Error", msg: errorMessage)
         DispatchQueue.main.async {
-            self.tableView?.setEmptyMessage(message)
+            self.tableView?.setEmptyMessage(errorMessage)
         }
     }
     
@@ -73,5 +74,16 @@ class EmployeeViewController: UIViewController,EmployeeViewProtocol {
 }
 
 extension EmployeeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.employee?.data?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: ListTableCell.identifier, for: indexPath) as? ListTableCell, let data = employee?.data, let emp = data[safe:indexPath.row] else {return UITableViewCell() }
+        cell.lblTitle?.text = emp.name
+        
+        return cell
+    }
+    
     
 }
