@@ -1,5 +1,5 @@
 //
-//  Interactor.swift
+//  EmployeeInteractor.swift
 //  VIPER
 //
 //  Created by Dipakbhai Valjibhai Makwana on 25/07/22.
@@ -51,7 +51,6 @@ class EmployeeInteractor:EmployeeInteractorProtocol {
     }
     
     func getEmployeeFromDB(){
-        
     }
     
 }

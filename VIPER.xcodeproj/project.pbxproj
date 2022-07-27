@@ -9,14 +9,25 @@
 /* Begin PBXBuildFile section */
 		7AC749D6289025B4003418AD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC749D5289025B4003418AD /* UIViewController+Extension.swift */; };
 		7AC749F32890FF41003418AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC749F12890FF41003418AD /* Main.storyboard */; };
-		7AC74A012891000C003418AD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A002891000C003418AD /* Router.swift */; };
-		7AC74A0428910026003418AD /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0328910026003418AD /* Entity.swift */; };
-		7AC74A0928910056003418AD /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0828910056003418AD /* Interactor.swift */; };
-		7AC74A0B28910063003418AD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0A28910063003418AD /* Presenter.swift */; };
-		7AC74A0E28910079003418AD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0C28910079003418AD /* View.swift */; };
-		7AC74A0F28910079003418AD /* ListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0D28910079003418AD /* ListTableCell.swift */; };
+		7AC74A012891000C003418AD /* EmployeeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A002891000C003418AD /* EmployeeRouter.swift */; };
+		7AC74A0428910026003418AD /* EmployeeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0328910026003418AD /* EmployeeEntity.swift */; };
+		7AC74A0928910056003418AD /* EmployeeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0828910056003418AD /* EmployeeInteractor.swift */; };
+		7AC74A0B28910063003418AD /* EmployeePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0A28910063003418AD /* EmployeePresenter.swift */; };
+		7AC74A0E28910079003418AD /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A0C28910079003418AD /* EmployeeView.swift */; };
 		7AC74A11289103C9003418AD /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A10289103C9003418AD /* UITableView+Extension.swift */; };
 		7AC74A1328910417003418AD /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A1228910417003418AD /* Array+Extension.swift */; };
+		7AC74A1828910BFB003418AD /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A1728910BFB003418AD /* View+Extension.swift */; };
+		7AC74A1B28910CA4003418AD /* ListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A1928910CA4003418AD /* ListTableCell.swift */; };
+		7AC74A1C28910CA4003418AD /* ListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC74A1A28910CA4003418AD /* ListTableCell.xib */; };
+		7AC74A1F28911085003418AD /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 7AC74A1E28911085003418AD /* IHProgressHUD */; };
+		7AC74A2128913393003418AD /* EmployeeDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A2028913393003418AD /* EmployeeDetailRouter.swift */; };
+		7AC74A2328913526003418AD /* EmployeeDetailIntractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A2228913526003418AD /* EmployeeDetailIntractor.swift */; };
+		7AC74A2528913541003418AD /* EmployeeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A2428913541003418AD /* EmployeeDetailPresenter.swift */; };
+		7AC74A2E28917830003418AD /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A2C28917830003418AD /* EmployeeDetailViewController.swift */; };
+		7AC74A2F28917830003418AD /* EmployeeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC74A2D28917830003418AD /* EmployeeDetailViewController.xib */; };
+		7AC74A32289178CE003418AD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7AC74A31289178CE003418AD /* SDWebImage */; };
+		7AC74A3528917949003418AD /* EmployeeDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC74A3328917949003418AD /* EmployeeDetailTableCell.swift */; };
+		7AC74A3628917949003418AD /* EmployeeDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC74A3428917949003418AD /* EmployeeDetailTableCell.xib */; };
 		7AD6C9D3288EF2F400759811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6C9D2288EF2F400759811 /* AppDelegate.swift */; };
 		7AD6C9D5288EF2F400759811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6C9D4288EF2F400759811 /* SceneDelegate.swift */; };
 		7AD6C9D7288EF2F400759811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6C9D6288EF2F400759811 /* ViewController.swift */; };
@@ -52,14 +63,23 @@
 /* Begin PBXFileReference section */
 		7AC749D5289025B4003418AD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7AC749F22890FF41003418AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7AC74A002891000C003418AD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		7AC74A0328910026003418AD /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		7AC74A0828910056003418AD /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		7AC74A0A28910063003418AD /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		7AC74A0C28910079003418AD /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		7AC74A0D28910079003418AD /* ListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableCell.swift; sourceTree = "<group>"; };
+		7AC74A002891000C003418AD /* EmployeeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRouter.swift; sourceTree = "<group>"; };
+		7AC74A0328910026003418AD /* EmployeeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEntity.swift; sourceTree = "<group>"; };
+		7AC74A0828910056003418AD /* EmployeeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeInteractor.swift; sourceTree = "<group>"; };
+		7AC74A0A28910063003418AD /* EmployeePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeePresenter.swift; sourceTree = "<group>"; };
+		7AC74A0C28910079003418AD /* EmployeeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 		7AC74A10289103C9003418AD /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "../../../../../LearningWithPOC/LearningWithPOC/Extension/UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7AC74A1228910417003418AD /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "../../../../../LearningWithPOC/LearningWithPOC/Extension/Array+Extension.swift"; sourceTree = "<group>"; };
+		7AC74A1728910BFB003418AD /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		7AC74A1928910CA4003418AD /* ListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableCell.swift; sourceTree = "<group>"; };
+		7AC74A1A28910CA4003418AD /* ListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableCell.xib; sourceTree = "<group>"; };
+		7AC74A2028913393003418AD /* EmployeeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailRouter.swift; sourceTree = "<group>"; };
+		7AC74A2228913526003418AD /* EmployeeDetailIntractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailIntractor.swift; sourceTree = "<group>"; };
+		7AC74A2428913541003418AD /* EmployeeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailPresenter.swift; sourceTree = "<group>"; };
+		7AC74A2C28917830003418AD /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		7AC74A2D28917830003418AD /* EmployeeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailViewController.xib; sourceTree = "<group>"; };
+		7AC74A3328917949003418AD /* EmployeeDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableCell.swift; sourceTree = "<group>"; };
+		7AC74A3428917949003418AD /* EmployeeDetailTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailTableCell.xib; sourceTree = "<group>"; };
 		7AD6C9CF288EF2F400759811 /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD6C9D2288EF2F400759811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD6C9D4288EF2F400759811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC74A32289178CE003418AD /* SDWebImage in Frameworks */,
+				7AC74A1F28911085003418AD /* IHProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +129,8 @@
 		7AC749FF2890FF90003418AD /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				7AC74A002891000C003418AD /* Router.swift */,
+				7AC74A002891000C003418AD /* EmployeeRouter.swift */,
+				7AC74A2028913393003418AD /* EmployeeDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -115,7 +138,7 @@
 		7AC74A022891001A003418AD /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				7AC74A0328910026003418AD /* Entity.swift */,
+				7AC74A0328910026003418AD /* EmployeeEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -123,7 +146,8 @@
 		7AC74A0528910035003418AD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7AC74A0A28910063003418AD /* Presenter.swift */,
+				7AC74A0A28910063003418AD /* EmployeePresenter.swift */,
+				7AC74A2428913541003418AD /* EmployeeDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -131,7 +155,8 @@
 		7AC74A062891003F003418AD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				7AC74A0828910056003418AD /* Interactor.swift */,
+				7AC74A0828910056003418AD /* EmployeeInteractor.swift */,
+				7AC74A2228913526003418AD /* EmployeeDetailIntractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -139,8 +164,13 @@
 		7AC74A072891004A003418AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7AC74A0D28910079003418AD /* ListTableCell.swift */,
-				7AC74A0C28910079003418AD /* View.swift */,
+				7AC74A0C28910079003418AD /* EmployeeView.swift */,
+				7AC74A1928910CA4003418AD /* ListTableCell.swift */,
+				7AC74A1A28910CA4003418AD /* ListTableCell.xib */,
+				7AC74A2C28917830003418AD /* EmployeeDetailViewController.swift */,
+				7AC74A2D28917830003418AD /* EmployeeDetailViewController.xib */,
+				7AC74A3328917949003418AD /* EmployeeDetailTableCell.swift */,
+				7AC74A3428917949003418AD /* EmployeeDetailTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +283,7 @@
 				7AD6CA11288EFECB00759811 /* Data+Extension.swift */,
 				7AC749D5289025B4003418AD /* UIViewController+Extension.swift */,
 				7AC74A1228910417003418AD /* Array+Extension.swift */,
+				7AC74A1728910BFB003418AD /* View+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -273,6 +304,10 @@
 			dependencies = (
 			);
 			name = VIPER;
+			packageProductDependencies = (
+				7AC74A1E28911085003418AD /* IHProgressHUD */,
+				7AC74A31289178CE003418AD /* SDWebImage */,
+			);
 			productName = VIPER;
 			productReference = 7AD6C9CF288EF2F400759811 /* VIPER.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +380,10 @@
 				Base,
 			);
 			mainGroup = 7AD6C9C6288EF2F400759811;
+			packageReferences = (
+				7AC74A1D28911085003418AD /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
+				7AC74A30289178CE003418AD /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 7AD6C9D0288EF2F400759811 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,8 +400,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC74A2F28917830003418AD /* EmployeeDetailViewController.xib in Resources */,
+				7AC74A3628917949003418AD /* EmployeeDetailTableCell.xib in Resources */,
 				7AC749F32890FF41003418AD /* Main.storyboard in Resources */,
 				7AD6C9DF288EF2F600759811 /* LaunchScreen.storyboard in Resources */,
+				7AC74A1C28910CA4003418AD /* ListTableCell.xib in Resources */,
 				7AD6C9DC288EF2F600759811 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,22 +430,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC74A0B28910063003418AD /* Presenter.swift in Sources */,
+				7AC74A0B28910063003418AD /* EmployeePresenter.swift in Sources */,
 				7AD6CA0F288EFEAA00759811 /* URLs.swift in Sources */,
 				7AD6C9D7288EF2F400759811 /* ViewController.swift in Sources */,
+				7AC74A2128913393003418AD /* EmployeeDetailRouter.swift in Sources */,
+				7AC74A2328913526003418AD /* EmployeeDetailIntractor.swift in Sources */,
 				7AD6CA18288F003100759811 /* NetworkManager.swift in Sources */,
-				7AC74A0428910026003418AD /* Entity.swift in Sources */,
-				7AC74A0F28910079003418AD /* ListTableCell.swift in Sources */,
-				7AC74A0E28910079003418AD /* View.swift in Sources */,
+				7AC74A0428910026003418AD /* EmployeeEntity.swift in Sources */,
+				7AC74A0E28910079003418AD /* EmployeeView.swift in Sources */,
 				7AC749D6289025B4003418AD /* UIViewController+Extension.swift in Sources */,
+				7AC74A3528917949003418AD /* EmployeeDetailTableCell.swift in Sources */,
 				7AD6C9D3288EF2F400759811 /* AppDelegate.swift in Sources */,
+				7AC74A1B28910CA4003418AD /* ListTableCell.swift in Sources */,
+				7AC74A2528913541003418AD /* EmployeeDetailPresenter.swift in Sources */,
 				7AC74A1328910417003418AD /* Array+Extension.swift in Sources */,
 				7AD6CA14288EFF6A00759811 /* APIManager.swift in Sources */,
-				7AC74A012891000C003418AD /* Router.swift in Sources */,
-				7AC74A0928910056003418AD /* Interactor.swift in Sources */,
+				7AC74A012891000C003418AD /* EmployeeRouter.swift in Sources */,
+				7AC74A0928910056003418AD /* EmployeeInteractor.swift in Sources */,
 				7AD6CA12288EFECB00759811 /* Data+Extension.swift in Sources */,
+				7AC74A2E28917830003418AD /* EmployeeDetailViewController.swift in Sources */,
 				7AD6C9D5288EF2F400759811 /* SceneDelegate.swift in Sources */,
 				7AD6CA16288EFFD700759811 /* Enums.swift in Sources */,
+				7AC74A1828910BFB003418AD /* View+Extension.swift in Sources */,
 				7AC74A11289103C9003418AD /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +790,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AC74A1D28911085003418AD /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.8;
+			};
+		};
+		7AC74A30289178CE003418AD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AC74A1E28911085003418AD /* IHProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AC74A1D28911085003418AD /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
+			productName = IHProgressHUD;
+		};
+		7AC74A31289178CE003418AD /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AC74A30289178CE003418AD /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AD6C9C7288EF2F400759811 /* Project object */;
 }

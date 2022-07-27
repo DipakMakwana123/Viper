@@ -48,7 +48,8 @@ class APIManager{
                 
                 guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
                     debugPrint("Error: HTTP request failed")
-                    completion(false, data,response,error)
+                    let err = NSError(domain:"", code: 0, userInfo:[ NSLocalizedDescriptionKey: "HTTP request failed"]) as Error
+                    completion(false, data,response,err)
                     return
                 }
                 

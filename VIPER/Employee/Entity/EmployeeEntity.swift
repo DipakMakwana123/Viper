@@ -1,5 +1,5 @@
 //
-//  Entity.swift
+//  EmployeeEntity.swift
 //  VIPER
 //
 //  Created by Dipakbhai Valjibhai Makwana on 25/07/22.
