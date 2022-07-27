@@ -21,4 +21,19 @@ extension UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    func setUp(view:EmployeeViewProtocol){
+        
+        let empRouter = EmployeeRouter()
+        
+        var view : EmployeeViewProtocol =  view
+        var presenter: EmployeePresenterProtocol = EmployeePresenter()
+        var intractor: EmployeeInteractorProtocol = EmployeeInteractor()
+        
+        view.presenter = presenter
+         
+        presenter.view = view
+        presenter.interactor = intractor
+        presenter.router = empRouter
+        intractor.presenter = presenter
+    }
 }

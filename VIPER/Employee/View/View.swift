@@ -39,7 +39,7 @@ class EmployeeViewController: UIViewController,EmployeeViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setUp(view: self)
+        setUp(view: self)
         
         configureViews()
         presenter?.showEmployee()
