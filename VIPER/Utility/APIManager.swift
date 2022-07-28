@@ -10,8 +10,6 @@ import UIKit
 import Combine
 
 
-
-
 class APIManager{
     
  
@@ -26,33 +24,26 @@ class APIManager{
         })
         .resume()
     }
-    
-    
     func requestAPI(url:URL, completion: @escaping (Bool,Data?,URLResponse?,Error?) -> ()) {
         
         if NetworkManager.isConnectedToNetwork() {
-            
             let dataTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
-                
                 guard error == nil else {
                     debugPrint("Error: problem calling GET \(error?.localizedDescription ?? "")")
                     completion(false, data,response,error)
                     return
                 }
-                
                 guard let data = data else {
                     debugPrint("Error: did not receive data")
                     completion(false, data,response,error)
                     return
                 }
-                
                 guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
                     debugPrint("Error: HTTP request failed")
                     let err = NSError(domain:"", code: 0, userInfo:[ NSLocalizedDescriptionKey: "HTTP request failed"]) as Error
                     completion(false, data,response,err)
                     return
                 }
-                
                 completion(true, data,response,error)
             })
             dataTask.resume()
@@ -63,10 +54,6 @@ class APIManager{
             completion(true, nil,nil,error)
         }
     }
-    
-   
-    
-    
 }
 
 // MARK: Multipart functions

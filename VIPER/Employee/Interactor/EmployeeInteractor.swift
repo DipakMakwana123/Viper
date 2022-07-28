@@ -20,7 +20,6 @@ import Combine
 
 
 protocol EmployeeInteractorProtocol {
-    
     var presenter: EmployeePresenterProtocol? {get set}
     func getEmployee()
     func getEmployeeFromDB()
@@ -28,14 +27,11 @@ protocol EmployeeInteractorProtocol {
 // Concrete Implementation
 class EmployeeInteractor:EmployeeInteractorProtocol {
     
-    var apiManager: APIManager?
-    
+    var presenter: EmployeePresenterProtocol?
+    var apiManager: APIManager? // Separate Entity
     init(apiManager:APIManager? = APIManager()){
         self.apiManager = apiManager
     }
-    
-    var presenter: EmployeePresenterProtocol?
-    
     func getEmployee(){
         guard let url = URL(string:"\(BaseURL.url)\(EndPoint.employees)") else {
             return
@@ -49,7 +45,6 @@ class EmployeeInteractor:EmployeeInteractorProtocol {
             }
         })
     }
-    
     func getEmployeeFromDB(){
     }
     

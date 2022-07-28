@@ -13,5 +13,3 @@ struct BaseURL{
 struct EndPoint{
     static let employees: String = "/api/v1/employees/"
 }
-
-

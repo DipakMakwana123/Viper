@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Data {
     func getModal<T:Codable>(modal : T.Type) -> T?{
         do {

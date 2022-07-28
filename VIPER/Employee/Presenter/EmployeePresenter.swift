@@ -18,7 +18,6 @@ import UIKit
  - Format the data
  - Convert into Modal/ Entity
  
- 
  */
 
 
@@ -35,7 +34,7 @@ protocol EmployeePresenterProtocol {
 }
 // Concrete Implementation
 class EmployeePresenter: EmployeePresenterProtocol {
-   
+    
     var view: EmployeeViewProtocol?
     var interactor: EmployeeInteractorProtocol?
     var router: EmployeeRouterProtocol?

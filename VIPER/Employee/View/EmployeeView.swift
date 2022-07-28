@@ -28,17 +28,13 @@ protocol EmployeeViewProtocol {
 class EmployeeViewController: UIViewController,EmployeeViewProtocol {
     
     var presenter: EmployeePresenterProtocol?
-    
+    var employee: Employee?
     var tableView: UITableView? = {
         let table = UITableView()
         table.separatorStyle = .singleLine
         table.registerCell(identifiers: [ListTableCell.identifier])
         return table
     }()
-    
-    
-    var employee: Employee?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp(view: self)
@@ -54,7 +50,6 @@ class EmployeeViewController: UIViewController,EmployeeViewProtocol {
         super.viewDidLayoutSubviews()
         self.navigationItem.title = "Employee"
     }
-    
     private func configureViews(){
         configureTableView()
         

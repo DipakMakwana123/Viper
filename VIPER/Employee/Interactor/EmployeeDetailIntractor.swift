@@ -8,14 +8,12 @@
 import Foundation
 
 protocol EmployeeDetailIntractorProtocol {
-    
     var presenter: EmployeeDetailPresenterProtocol? {get set}
     func getEmployeeDetail()
 }
 class EmployeeDetailIntractor: EmployeeDetailIntractorProtocol{
    
     var presenter: EmployeeDetailPresenterProtocol?
-    
     func getEmployeeDetail(){
         
     }

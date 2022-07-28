@@ -16,7 +16,6 @@ protocol EmployeeDetailViewProtocol {
 class EmployeeDetailViewController: UIViewController {
     
     var presenter: EmployeeDetailPresenterProtocol?
-   
     var empData:Datum?
     
     var tableView: UITableView? = {
@@ -25,7 +24,6 @@ class EmployeeDetailViewController: UIViewController {
         table.registerCell(identifiers: [EmployeeDetailTableCell.identifier])
         return table
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.router?.setUp()

@@ -12,11 +12,9 @@ enum CustomError: Error {
     case parserError
     case unknown
 }
-
 enum APIFailureCondition: Error {
     case invalidServerResponse
     case unknownError
-    
 }
 enum RESTClientError: Error {
     case unknown
